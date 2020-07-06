@@ -7,7 +7,7 @@ CREATE TABLE `order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `order_item` (
-  `order_list_id` int NOT NULL AUTO_INCREMENT,
+  `order_item_id` int NOT NULL AUTO_INCREMENT,
   `order_id` int DEFAULT NULL,
   `product_id` int DEFAULT NULL,
   `promotion_id` int DEFAULT NULL,
