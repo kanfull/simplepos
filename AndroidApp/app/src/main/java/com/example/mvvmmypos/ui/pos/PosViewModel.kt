@@ -22,11 +22,19 @@ class PosViewModel() : ViewModel() {
     }
 
     fun addBuyProduct(item: ProductItem){
-        totalPrice.setValue(totalPrice.value?.plus(item.promotionPrice))
         this.productBuyList.add(item)
+        this.updatePrice()
     }
     fun removeBuyProduct(item: ProductItem){
-        totalPrice.setValue(totalPrice.value?.minus(item.promotionPrice))
         this.productBuyList.remove(item)
+        this.updatePrice()
+    }
+
+    private fun updatePrice(){
+        var sum:Double=0.0
+        this.productBuyList.forEach {
+            sum+=it.promotionPrice
+        }
+        totalPrice.value = sum
     }
 }
