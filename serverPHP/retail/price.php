@@ -20,9 +20,7 @@
     die("null"."\n");
   }
 
-  $dtstring = date('Y-m-d H:i:s', intval($_POST["dt"])); 
-
-  $sql = "SELECT price_id,product_id,price_value,valid,UNIX_TIMESTAMP(NOW()) as update_time,UNIX_TIMESTAMP(NOW()) as created_time FROM price WHERE update_time >= '".$dtstring."'";
+  $sql = "SELECT price_id,product_id,price_value,valid,UNIX_TIMESTAMP(NOW()) as update_time,UNIX_TIMESTAMP(NOW()) as created_time FROM price WHERE update_time >= ".intval($_POST["dt"]);
   $result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
 
   $array = array();

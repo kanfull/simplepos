@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mvvmmypos.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_posFragment"
+            app:destination="@id/posFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/posFragment"
+        android:name="com.example.mvvmmypos.ui.pos.PosFragment"
+        android:label="pos_fragment"
+        tools:layout="@layout/pos_fragment" >
+        <action
+            android:id="@+id/action_posFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_posFragment_to_syncingFragment"
+            app:destination="@id/syncingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/syncingFragment"
+        android:name="com.example.mvvmmypos.ui.sync.SyncingFragment"
+        android:label="syncing_fragment"
+        tools:layout="@layout/syncing_fragment" >
+        <action
+            android:id="@+id/action_syncingFragment_to_posFragment"
+            app:destination="@id/posFragment" />
+    </fragment>
+</navigation>

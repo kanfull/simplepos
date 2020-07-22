@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.pos.PosFragment">
+
+        <LinearLayout
+            android:id="@+id/buyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="610dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_gravity="bottom">
+            <Button
+                android:id="@+id/syncBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sync"
+                />
+
+            <Button
+                android:id="@+id/logoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="logout"
+                />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

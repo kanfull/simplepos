@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/productNameCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="36dp"
+        android:text="CheckBox" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/productPricetTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:layout_gravity="right"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/productPromotionTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pro"
+            android:textColor="#FF0000"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+</LinearLayout>
